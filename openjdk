@@ -1,7 +1,5 @@
 FROM centos:7
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo
 RUN curl -o /etc/yum.repos.d/epel.repo        https://mirrors.aliyun.com/repo/epel-7.repo
-RUN yum -y install vim wget git zip unzip lrzsz net-tools tree nmap dos2unix nc lsof tcpdump htop iftop iotop iostat sysstat nethogs gcc gcc-c++  vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch netstat bash-completion  procps-ng psmisc 
-
+RUN yum -y install vim wget git zip unzip netstat net-tools tree nmap nc lsof tcpdump htop iftop iotop iostat sysstat gcc bind-utils zlib zlib-devel openssl openssl-devel patch  procps-ng psmisc 
 RUN yum -y install java-1.8.0-openjdk.x86_64 java-1.8.0-openjdk-devel.x86_64 java-1.8.0-openjdk-accessibility.x86_64 java-1.8.0-openjdk-headless.x86_64
-RUN java -version
