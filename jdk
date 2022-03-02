@@ -4,7 +4,7 @@ MAINTAINER ChenKaidi 991214519@qq.com
 RUN yum -y update 
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo
 RUN curl -o /etc/yum.repos.d/epel.repo        https://mirrors.aliyun.com/repo/epel-7.repo
-RUN yum -y install kde-l10n-Chinese glibc-common vim wget zip unzip  net-tools tree nmap dos2unix nc lsof tcpdump htop iftop iotop iostat sysstat nethogs gcc gcc-c++ vmstat bind-utils zlib zlib-devel ruby openssl openssl-devel patch bash-completion  procps-ng psmisc \
+RUN yum -y install kde-l10n-Chinese glibc-common vim wget zip unzip  net-tools telnet tree nmap dos2unix nc lsof tcpdump htop iftop iotop iostat sysstat nethogs gcc gcc-c++ vmstat bind-utils zlib zlib-devel libevent-devel ruby openssl openssl-devel  systemd-devel bash-completion traceroute patch procps-ng psmisc \
 RUN localedef -c -f UTF-8 -i zh_CN zh_CN.UTF-8 \
     && /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo 'Asia/Shanghai' &gt; /etc/timezone
