@@ -24,3 +24,11 @@ WORKDIR /app
 COPY --from=builder /app/hello /app/hello
 
 CMD ["./hello"]
+
+---
+其中几点可以了解下：
+1.默认禁用了 cgo
+2.启用了 GOPROXY
+3.去掉了调试信息 -ldflags="-s -w" 以减小镜像尺寸
+4.安装了 ca-certificates，这样使用 TLS证书就没问题了
+5.自动设置了本地时区，这样我们在日志里看到的是北京时间了
